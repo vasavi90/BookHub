@@ -53,45 +53,58 @@ class LoginRoute extends Component {
 
   render() {
     const {showSubmitError, username, password} = this.state
+
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="main-container">
         <img
-          src="https://res.cloudinary.com/dgtyr0hwo/image/upload/v1691828241/Rectangle_1467_leotfn.png"
-          alt="login-img"
+          src="https://res.cloudinary.com/dgtyr0hwo/image/upload/v1692258521/Ellipse_99_wog6ct.png"
+          alt="small-img"
+          className="small-login-image"
         />
-        <form onSubmit={this.submitForm} className="form">
-          <img
-            src="https://res.cloudinary.com/dgtyr0hwo/image/upload/v1691829615/Group_7731_fzlxgf.png"
-            alt="logo"
-            className="image"
-          />
-          <label className="label" htmlFor="username">
-            Username*
-          </label>
-          <input
-            type="text"
-            id="username"
-            className="input"
-            value={username}
-            onChange={this.onChangeUserName}
-          />
-          <label className="label" htmlFor="password">
-            Password*
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="input"
-            value={password}
-            onChange={this.onChangePassword}
-          />
-          {showSubmitError && (
-            <p className="error">Username or Password is Invalid</p>
-          )}
-          <button type="submit" className="button">
-            Login
-          </button>
-        </form>
+        <img
+          src="https://res.cloudinary.com/dgtyr0hwo/image/upload/v1691828241/Rectangle_1467_leotfn.png"
+          alt="big-img"
+          className="big-login-img"
+        />
+        <div className="login-container">
+          <form className="main-form" onSubmit={this.onSubmit}>
+            <img
+              src="https://res.cloudinary.com/dgtyr0hwo/image/upload/v1691829615/Group_7731_fzlxgf.png"
+              alt="logo"
+              className="logo-img"
+            />
+            <label htmlFor="username" className="label">
+              Username*
+            </label>
+            <input
+              type="text"
+              id="username"
+              className="input"
+              value={username}
+              onChange={this.onChangeUserName}
+            />
+            <label htmlFor="password" className="label">
+              Password*
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="input"
+              value={password}
+              onChange={this.onChangePassword}
+            />
+            {showSubmitError && (
+              <p className="error-text ">Username or Password is Invalid</p>
+            )}
+            <button type="button" className="button">
+              Login
+            </button>
+          </form>
+        </div>
       </div>
     )
   }
