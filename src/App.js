@@ -1,5 +1,6 @@
 import {Route, Switch} from 'react-router-dom'
 import LoginRoute from './components/LoginRoute'
+import HomeRoute from './components/HomeRoute'
 import './App.css'
 
 // use the below bookshelvesList for rendering read status of book items in Bookshelves Route
@@ -29,7 +30,8 @@ const bookshelvesList = [
 
 const App = () => (
   <Switch>
-    <Route path="/" component={LoginRoute} />
+    <Route exact path="/login" component={HomeRoute} />
+    <Route exact path="/" component={LoginRoute} />
   </Switch>
 )
 

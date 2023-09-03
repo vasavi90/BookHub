@@ -71,7 +71,7 @@ class LoginRoute extends Component {
           className="big-login-img"
         />
         <div className="login-container">
-          <form className="main-form" onSubmit={this.onSubmit}>
+          <form className="main-form" onSubmit={this.submitForm}>
             <img
               src="https://res.cloudinary.com/dgtyr0hwo/image/upload/v1691829615/Group_7731_fzlxgf.png"
               alt="logo"
@@ -100,7 +100,7 @@ class LoginRoute extends Component {
             {showSubmitError && (
               <p className="error-text ">Username or Password is Invalid</p>
             )}
-            <button type="button" className="button">
+            <button type="submit" className="button">
               Login
             </button>
           </form>
