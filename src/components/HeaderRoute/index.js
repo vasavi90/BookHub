@@ -19,13 +19,9 @@ const HeaderRoute = props => {
           className="logo"
         />
       </Link>
-
-      <nav className="navbar">
-        <Link to="/" className="link">
+      <nav className="mobile-nav">
+        <Link to="/" className="mobile-link">
           Home
-        </Link>
-        <Link to="/shelf" className="link">
-          Bookshelves
         </Link>
       </nav>
       <div className="desktop-links">
