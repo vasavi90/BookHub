@@ -1,132 +1,133 @@
-.main-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-@media screen and (min-width: 768px) {
-  .main-container {
-    flex-direction: row;
-  }
-}
-.small-login-image {
-  display: inline-block;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  align-self: center;
-}
-@media screen and (min-width: 768px) {
-  .small-login-image {
-    display: none;
-  }
-}
-.big-login-img {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .big-login-img {
-    display: inline;
-  }
-}
-@media screen and (min-width: 768px) {
-  .login-container {
-    background-color: #ffffff;
-    border-radius: 20px;
-    align-self: center;
-    height: 484px;
-    width: 499px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 270px;
-    left: 852px;
-  }
-}
-.main-form {
+.login-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
 }
-.logo-img {
-  width: 104px;
-  height: 28px;
-  align-self: center;
-}
-@media screen and (min-width: 768px) {
-  .logo-img {
-    width: 180px;
-    height: 80px;
+
+@media screen and (min-width: 992px) {
+  .login-form-container {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
-.label {
-  font-weight: 600;
-  line-height: 19.36px;
-  font: inter;
-  color: #5a7184;
-  margin-top: 20px;
+
+.login-website-logo-mobile-image {
+  width: 165px;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 992px) {
+  .login-website-logo-mobile-image {
+    display: none;
+    border-radius: none;
+  }
+}
+
+.login-image {
+  width: 200px;
   margin-left: 50px;
 }
-@media screen and (min-width: 768px) {
-  .label {
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 19px;
-    letter-spacing: 0px;
-    margin-left: 7px;
+@media screen and (min-width: 992px) {
+  .login-image {
+    width: 50vw;
+    height: 90vh;
   }
 }
-.input {
-  width: 300px;
-  height: 56px;
-  border-radius: 10px;
-  border: 1px solid #5a7184;
-  outline: none;
-  margin-top: 10px;
-  align-self: center;
+
+.form-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
 }
-@media screen and (min-width: 768px) {
-  .input {
-    width: 360px;
-    height: 56px;
+@media screen and (max-width: 991px) {
+  .form-main-container {
+    width: 100vw;
   }
 }
-.button {
-  background: #0284c7;
-  width: 312px;
+
+.login-website-logo-desktop-image {
+  width: 185px;
+}
+@media screen and (max-width: 991px) {
+  .login-image {
+    display: none;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .form-container {
+    width: 350px;
+    flex-shrink: 0;
+    box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+    padding: 64px 48px 64px 48px;
+    justify-self: center;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.input-label {
+  margin-bottom: 0px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  line-height: 16px;
+  color: #475569;
+}
+
+.input-field {
+  font-size: 14px;
   height: 40px;
-  margin-top: 40px;
+  border: 1px solid #d7dfe9;
+  background-color: #e2e8f0;
+  color: #64748b;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+  outline: none;
+}
+
+.login-button {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 14px;
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  background-color: #0b69ff;
+  border-radius: 8px;
+  color: #ffffff;
+  border: none;
   outline: none;
   cursor: pointer;
-  border: none;
-  color: #ffffff;
-  font-family: Open Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  align-self: center;
-  border-radius: 15px;
 }
-@media screen and (min-width: 768px) {
-  .button {
-    width: 360px;
-    height: 56px;
-    top: 650px;
-    left: 921px;
-  }
-}
-.error-text {
+
+.error-message {
+  align-self: flex-start;
+  font-size: 12px;
   font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #ef4444;
-}
-@media screen and (min-width: 768px) {
-  .error-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-  }
+  margin-top: 3px;
+  margin-bottom: 0px;
+  color: #ff0b37;
+  line-height: 16px;
 }

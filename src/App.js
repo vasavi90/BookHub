@@ -29,6 +29,6 @@ const bookshelvesList = [
   },
 ]
 
-const App = () => <HeaderRoute />
+const App = () => <HomeRoute />
 
 export default App
